@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCT_WD_1 - Landing Page</title>
+
+  <style>
+    /* ===== Reset default styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent; /* will change on scroll */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background: #333;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 10px;
+      transition: all 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #fff;
+      color: #333;
+      border-radius: 4px;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(120deg, #0077b6, #0096c7, #00b4d8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+
+    /* ===== General Section Styling ===== */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* alternating background for readability */
+    section:nth-of-type(even) {
+      background: #f5f5f5;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Navigation ===== -->
+  <nav id="navbar">
+    <div class="logo">SkillCraft</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" id="home">
+    <h1>Welcome to SkillCraft Technology</h1>
+    <p>Learn by building. Our mission is to help you gain hands-on skills through real-world projects and internships.</p>
+  </header>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>SkillCraft Technology provides internship opportunities where learners can practice and grow in fields such as Web Development, Data Science, UI/UX, and Digital Marketing. We focus on learning by doing, preparing you for real challenges.</p>
+  </section>
+
+  <!-- ===== Services Section ===== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer structured internship tasks, mentorship, and project-based learning. Our goal is to make you industry-ready by exposing you to practical assignments.</p>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@skillcraft.com | Phone: +123 456 7890</p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 SkillCraft Technology. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== Script for Scroll Effect ===== -->
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+  </html>
+
+
